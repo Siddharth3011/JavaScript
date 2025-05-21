@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+table,th,td{
+    border: 1px, solid, #e7e7e7;
+}
+nav{
+    height: 5vh;
+    padding: 2vmin;
+    background-color: blueviolet;
+}
+a{
+    color: #fff;
+    text-decoration: none;
+}
+.container{
+    height: 85vh;
+}
+h1{
+    color: black;
+    font-weight: bold;
+    margin: 2vmin;
+}
+.project{
+    background-color: #1c1c1c;
+    color: #fff;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.color{
+    color: aliceblue;
+    display: flex;
+    flex-direction: row;
+}

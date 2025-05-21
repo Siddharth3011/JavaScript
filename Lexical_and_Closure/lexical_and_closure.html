@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lexical and Closure</title>
+</head>
+<body style="background-color: #313131;">
+    <button id="orange">orange</button>
+    <button id="green">green</button>
+</body>
+<script>
+
+
+//    //child parrent ke properties ko access kr sakte hain but vice-versa is not true. and ek child dusre child ke properties ko bhi access nhi kr sakta.
+//     function outer(){
+//         let username = "Sid"
+//         // console.log("Outer", secret); //ye access nhi ho sakta kyuki ye inner mein defind hai jo iska child hai
+//         function inner(){
+//             let secret = "mySecret123"
+//             console.log("inner", username);
+//         }
+//         function innertwo(){
+//             console.log("innerTwo", username);
+//             // console.log(secret); //ye access nhi hoga kyuki ye inner mein defind hai
+//         }
+//         inner()
+//         innertwo()
+//     }
+//     outer()
+//     // console.log("TOO Outer", username); //ye bhi access nhi hoga kyuki ye scope ke bahar declare hai
+
+
+// *******************************************closure*****************************************************
+    function makeFunc(){
+        const name = "Mozilla";
+        function displayName(){
+            console.log(name);
+        }
+        return displayName;
+    }
+
+    const myFunc = makeFunc();
+    myFunc(); // yahan displayName return kiya gya hai jiske wajah se wo pura laxical scope means parrent makeFunc() bhi sath sath return hoga.
+</script>
+<script>
+    //closure kaise lexical scope ko pass krta hai uska practical explanation: 
+
+    // document.getElementById("orange").onclick = function(){
+    //     document.body.style.backgroundColor = "orange"
+    // }
+    // document.getElementById("green").onclick = function(){
+    //     document.body.style.backgroundColor = "green"
+    // } 
+    // ham ye upper wale tarike se bhi kr sakte hain but hame pura function baar baar copy paste krna padega
+
+    // so aab ise closure ka use kr kaise krenge:
+
+    function clickHandler(color){
+        return function(){ //yahan ye function to return hoga heen sath heen sath pura laxical scope bhi jayega tabhi ham niche clickHandler ko access kr payenge.
+        document.body.style.backgroundColor = `${color}`
+        }
+    }
+
+    document.getElementById("orange").onclick = clickHandler("orange")
+    document.getElementById("green").onclick = clickHandler("green")
+</script>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html Events</title>
+</head>
+<body style="background-color: #414141; color: aliceblue;">
+    <h2>Amazing Images: </h2>
+     <div >
+        <ul id="images">
+            <li><img width="200px" id="photoshop" src="https://images.pexels.com/photos/3561339/pexels-photo-3561339.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt="photoshop"></li>
+            <li><img width="200px" id="japan" src="https://images.pexels.com/photos/3532553/pexels-photo-3532553.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="river" src="https://images.pexels.com/photos/3532551/pexels-photo-3532551.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="owl" src="https://images.pexels.com/photos/3532552/pexels-photo-3532552.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><img width="200px" id="prayer" src="https://images.pexels.com/photos/2522671/pexels-photo-2522671.jpeg?auto=compress&cs=tinysrgb&w=1600&lazy=load" alt=""></li>
+            <li><a style="color: aliceblue; text-decoration: none;" href="https://google.com" id="google">Google</a></li>
+        </ul>
+   </div>
+</body>
+<script>
+    //  type: mouse, keyboard events
+    //  timestamps: time, date dekhne ke liye
+    //  defaultPrevented: default behaviour rokne ke liye jaise submit button ko submit krne se rokna
+    //  target, toElement, srcElement, currentTarget,
+    //  clientX, clientY, screenX, screenY
+    //  altkey, ctrlKey, shiftkey, keyCode 
+    // document.getElementById('owl').onclick = function(){
+    //     alert("owl clicked")  ye kuch dikat de sakti hain aur isme feature bhi kam hota hai isliye hame event listener ka use karna chahiye
+    // }
+//OR
+    // attachEvent() this is used in early time
+//OR
+    //jQuery - on
+//Perfect Way:
+//Events:
+    document.getElementById('images').addEventListener('click', function(e){
+        console.log("clicked inside the ul");
+    }, false) //yahan false/true event propagation hai. false eventPublic hota hai aur true eventCapturing. //false deafault hota hai.
+    document.getElementById('owl').addEventListener('click', function(e){
+        console.log("Owl clicked inside the ul");
+    }, false) 
+//false likhne pr console main "Owl clicked inside the ul" pehle print hoga fir "clicked inside the ul" print hoga. or vice-versa
+    document.getElementById('google').addEventListener('click', function(e){
+        e.preventDefault();
+        e.stopPropagation();
+        console.log("google clicked");
+    })
+
+    document.querySelector('#images').addEventListener('click', function(e){
+        console.log(e.target.tagName);
+        if(e.target.tagName === 'IMG'){
+            console.log(e.target.Id);
+            let removeIt = e.target.parentNode
+            // removeIt.remove()
+        //OR
+            removeIt.parentNode.removeChild(removeIt)
+        }
+    }, false)
+</script>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+        0	UNSENT	Client has been created. open() not called yet.
+1	OPENED	open() has been called.
+2	HEADERS_RECEIVED	send() has been called, and headers and status are available.
+3	LOADING	Downloading; responseText holds partial data.
+4	DONE	The operation is complete.
+</body>
+<script>
+    const requestUrl = 'https://api.github.com/users/hiteshchoudhary'
+    const xhr = new XMLHttpRequest();//object bnaya gya hai
+    xhr.open('GET', requestUrl)
+    xhr.onreadystatechange = function(){
+        console.log(xhr.readyState);
+        if (xhr.readyState === 4) { // jb readyState ki value jo 0-4 tk hoti hai
+            const data = JSON.parse(this.responseText); //this keyword ka use kiya gya hai isi block of code ko refer krne ke liye. aur followers ya koi bhi data agr aata hai to wo string formate mein aata hai isliye use JSON formate mein convert kiya gya hai.
+            console.log(typeof data);
+            console.log(data.followers);// followers get krne ke liya likha gya hai
+        }
+    }
+    xhr.send(); // open dirctly call nhi hota isliye send ka use krte hain
+</script>
+</html>

@@ -1,0 +1,51 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: gray;
+}
+nav{
+    background-color: aqua;
+    margin: 0vh;
+    padding: 1vh;
+    height: 5vh;
+}
+a{
+    color: black;
+    text-decoration: none;
+    margin: 3vmin;
+}
+.Container{
+    margin: 6vh;
+}
+h1{
+    margin: 5vh;
+}
+label{
+    margin: 5vh;
+}
+button{
+    margin: 2vh 27vh;
+    border-radius: 0%;
+    height: 4vmin;
+    width: 10vmin;
+}
+#results{
+    margin: 0vh 25vh;
+    color: #fff;
+    font-size: large;
+    font-weight: bold;
+}
+#imfo{
+    margin: 0vh 25vh;
+    color: #fff;
+    font-size: large;
+    font-weight: bold;
+}
+h3{
+    margin: 10vh 2vh 2vh;
+}
+p{
+    margin: 2vh;
+}

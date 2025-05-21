@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM learning</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: #fff;
+        }
+    </style>
+</head>
+<body  class="bg-black">
+    <div>
+        <h1 id="chai" class="heading">DOM learning on chai and code</h1>
+        <!-- querySelector: ye sirf ek value ko select kr ke usko modify krne mein help krta hai  -->
+        <!-- document.querySelector('#chai') -->
+        <!-- document.querySelector('.heading') -->
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <!-- //document.querySelector('h2') -->
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <h2>Lorem ipsum dolor sit amet.</h2>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <input type="password">
+        <!-- document.querySelector('input[type="password"]') -->
+
+        <ul>
+            <li class="list-item">one</li>
+            <li class="list-item">two</li>
+            <li class="list-item">three</li>
+        </ul>
+        <!-- to change the background-color and padding of li in console: -->
+
+        <!-- document.querySelector('ul')
+        const myul = document.querySelector('ul')
+        myul.querySelector('li')
+        myul.querySelector('li')
+        const turngreen = myul.querySelector('li')
+        turngreen.style.backgroundColor = "green"
+        turngreen.style.padding="10px" -->
+
+        <!-- To change the color of item by using querySelectorAll:  -->
+
+        <!-- document.querySelectorAll('li')
+        const templist = document.querySelectorAll('li') => store in constant
+        templist => to check the templist that consist the li elements.
+        templist.style.color = "green" => it gives an error because templist is like an array which consist the li elements.
+        templist[0].style.color = 'green' => it change the color
+         --> 
+        <!-- because foreach exist in the templist function's we can also use it to change the background-color: -->
+        <!-- templist.forEach(function (l) {
+            l.style.backgroundColor = 'blue'
+        }) -->
+
+        <!-- if we want modification via class then:  -->
+        <!-- document.getElementsByClassName('list-item')
+        const tempClassList = document.getElementsByClassName('list-item')
+        tempClassList
+        Array.from(tempClassList)
+        const myConvertedArray = Array.from(tempClassList)
+        myConvertedArray.forEach(function (li) {
+            li.style.color = "orange"
+        }) -->
+
+        
+        <!-- title.innerText: ye jo content dikh raha hota hai usi ko print krta hai-->
+         <!-- jbki title.textContent: ye jitna content hai wo sab print krega. -->
+          <!-- aur chai.innerHTML: ye pure content ke sath jo html valuess hai wo bhi dega -->
+    </div>
+</body>
+</html>
+
