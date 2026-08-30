@@ -25,11 +25,11 @@ const hundreded = 1000000
 // console.log(Math.min(4,3,6,5));
 // console.log(Math.max(3,4,6,8));
 
-console.log(Math.random());
-console.log((Math.random()*10)+1);
-console.log(Math.floor((Math.random()*10)+1));
+console.log(Math.random()); //it gives number in the range of 0 to 1
+console.log((Math.random()*10)+1); //to get number greater than zero we use this
+console.log(Math.floor((Math.random()*10)+1)); //this one is a formula that gives the proper natural number
 
 const min= 1;
 const max= 6;
 
-console.log(Math.floor((Math.random()*(max-min+1))+min));
+console.log(Math.floor((Math.random()*(max-min+1))+min)); //this one is used when you have to get the number in a range of min to max
