@@ -15,6 +15,8 @@ const user = {
 
 // console.log(this); //ye vscode pr run krne pr to {} <== empty value dega but agar browser pr console mein jakr check krenge to windows output ayega
 
+//broswer ke andr global object window object hota hai.
+
 // function chai(){
 //     let username = "hitesh"
 //     // console.log(this); is se bahut sari values milengi 
@@ -29,15 +31,16 @@ const chai = () => {
     // console.log(this); 
     console.log(this.username);
 }
-// chai()
+// chai()  
+//normal function mein this easily run kr jata hai kyuki normal function mein this iss baat pr depend krta hai ki function ko kaha call kiya gya hai jbki arroe function ka apna koi this nhi hota wo parrent scope se value inherit krta hai iss liye nhi chlta
 
 // const addtwo = (num1,num2) => {
-//     return num1 + num2
+//     return num1 + num2 //explicit return
 // }
 // console.log(addtwo(3,4));
 
                         //OR
-// const addtwo = (num1,num2) => num1 + num2
+// const addtwo = (num1,num2) => num1 + num2 //implicit return: where we don't have to write return keyword
 //OR
 const addtwo = (num1,num2) => (num1 + num2)
 console.log(addtwo(2,2));
