@@ -1,0 +1,26 @@
+//JavaScript Execution Context: ye btata hai ki javascript apke page ko kaise run kregi
+
+//to javascript ke kisi bhi code ke liye global execution context to bnega heen aur fir ek keyword hota hai this to this mein global execution context ko rakh dete hai
+
+//javascript single threaded hai means iske paas ek heen call stack hota hai to ye ek time pr ek heen task ko execute krta hai, isliye ye default roop se synchronus hoti hai but aisa nhi hai ki ye hmesa synchronus heen rahegi means ye kabhi-kabhi asynchronus bhi ho skti hai like event loop, web api, callback queue ko jb use krte hai to ye asynchronus ki tarah kaam krta hai
+
+//fir function execution context bhi hota hai
+
+//aur ek eval execution context bhi hota hai waise ye jyada imp nhi hai
+
+//aab aata hai code block jo do part mein execute hota hai ek hai memory creation phase dusra execution phase
+
+//agr bahut sare function aayenge to callstack use krte hai aur kyuki ye stack hai to lifo ka concept use kiya jayega.
+
+agr visualize krna ho to browser->inspect->sources->snipets->newsnippets->code:
+function one(){
+console.log("one");
+two()
+}
+function two(){
+console.log("two");
+three()
+}
+function three(){
+console.log("three");
+}
