@@ -18,8 +18,8 @@ for (const greet of greetings) {
     
 }
 
-//Maps  
-const map = new Map()
+//Maps => ek tarah ke object heen hote hain jinme key, value pairs mein data likhe jate hai, pr dono ka kaam krne ka tarika alg hota hai
+const map = new Map() //yahan for in loop nhi lga skte kyuki map iteratable nhi hota hai
 map.set('IN',"India")
 map.set('USA','United States Of America')
 map.set('Fr','France')
