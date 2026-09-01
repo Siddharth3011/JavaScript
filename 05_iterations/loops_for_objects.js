@@ -12,7 +12,7 @@ const myObject = {
     rb: "ruby",
     swift: "swift by apple"
 }
-for (const key in myObject) {
+for (const key in myObject) { //keys object ki direct property bn jati hai tbhi agle line mein keys print krne pr keys milta hai na ki whole object.
     // console.log(key);
     // console.log(myObject[key]);
     
