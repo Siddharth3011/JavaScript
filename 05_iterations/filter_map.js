@@ -1,10 +1,11 @@
 // const coding = ["js","ruby","java","python","cpp"]
 // const values = coding.forEach((item)=>{
 //     console.log(item);
-//     return values
+//     return item
 // })
 // console.log(values);
-//yahan pr ham value ko ek variable mein store karna chahte hain but wo print nhi ho raha hai
+//yahan pr ham value ko ek variable mein store kar print kra rahe hai to values to print ho jayegi pr last mein undefined likha ayega.
+//kyuki forEach kuch return nhi krta, tum explicitly return item likh bhi doge fir bhi nhi krega isliye ham filters ka use krte hai
 
 // USE  OF filter operation:
 
@@ -15,7 +16,7 @@ const myNums = [1,2,3,4,5,6,7,8]
 // })
 // console.log(newNums);
 
-//agr forEach mein use karna ho to:
+//agr forEach mein return krana ho to direct to nhi but ek naya array create kr kr skte hai:
 const newNums = []
 myNums.forEach((num)=>{ 
     if (num>4) {
