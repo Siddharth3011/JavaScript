@@ -18,7 +18,7 @@ if (userEmail ===0){
 }
 
 const emptyobj = {}
-if (Object.keys(emptyobj).length===0) {
+if (Object.keys(emptyobj).length===0) { //yahan object.keys likhne pr object array mein convert ho gya jiske wajah se heen fir ham length property lga ske
     // console.log("Object is empty");
 }
 
