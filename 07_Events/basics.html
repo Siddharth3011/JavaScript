@@ -39,11 +39,12 @@
     }, false) //yahan false/true event propagation hai. false eventPublic hota hai aur true eventCapturing. //false deafault hota hai.
     document.getElementById('owl').addEventListener('click', function(e){
         console.log("Owl clicked inside the ul");
+        e.stopPropagation();//aur yahan agr ham stop propagation likhenge to event uper nhi jayega aur isliye sirf "Owl clicked inside the ul" heen print hoga
     }, false) 
 //false likhne pr console main "Owl clicked inside the ul" pehle print hoga fir "clicked inside the ul" print hoga. or vice-versa
+    //kyuki eventPublic bottom to top jata hai aur eventCapturing top to bottom
     document.getElementById('google').addEventListener('click', function(e){
         e.preventDefault();
-        e.stopPropagation();
         console.log("google clicked");
     })
 
