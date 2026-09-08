@@ -18,7 +18,7 @@ const startChangingColor = function(){
 };
 const stopChangingColor = function(){
     clearInterval(intervalId)
-    intervalId = null;
+    intervalId = null; //yahan ham intervalId koo derefernece kr raha hai taki baar-baar intervalId ko override na kr rahe ho
 };
 
 document.querySelector('#start').addEventListener('click', startChangingColor);
