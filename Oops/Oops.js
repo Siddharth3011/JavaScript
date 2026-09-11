@@ -33,7 +33,8 @@ function user(username, loginCount, isLoggedIn){
 // const userTwo = user("Ram", 3000, false)
 // console.log(userOne);//yahan userTwo ki value print hogi. userTwo userOne ki values ko overide kr dega.
 
-//isliye ham new keyword ka use krenge:
+//isliye ham new keyword ka use krenge, new keyword ek nya instance create krta hai, jaise this keyword likhne pr hr baar nya object create  hota hai waise heen
+//new keyword ek construction function ko call krta hai, aur ye constructor function jo bhi arguments hoti hai unko pack krta hai aur de deta hai
 
 const userOne = new user("Sid", 12, true)
 const userTwo = new user("Ram", 3000, false)
