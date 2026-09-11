@@ -8,7 +8,7 @@ class User{
         return this._email.toUpperCase()
     }
 
-    set email(value){
+    set email(value){ //name jo hai wo same heen hona chahiye agar setter mein email likha hai to geter mein bhi email heen hona chahiye.
         this._email = value
     }
 
