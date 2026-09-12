@@ -30,6 +30,10 @@
 //     outer()
 //     // console.log("TOO Outer", username); //ye bhi access nhi hoga kyuki ye scope ke bahar declare hai
 
+    //to lexical scope means:
+    //children can access the properties or variable defined in parent scope
+    //but neither parent nor siblings can access the properties of children or other sibling
+
 
 // *******************************************closure*****************************************************
     function makeFunc(){
@@ -54,7 +58,7 @@
     // } 
     // ham ye upper wale tarike se bhi kr sakte hain but hame pura function baar baar copy paste krna padega
 
-    // so aab ise closure ka use kr kaise krenge:
+    // so aab ise closure ka use kr aise krenge:
 
     function clickHandler(color){
         return function(){ //yahan ye function to return hoga heen sath heen sath pura laxical scope bhi jayega tabhi ham niche clickHandler ko access kr payenge.
